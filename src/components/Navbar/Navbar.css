@@ -1,0 +1,23 @@
+nav {
+    padding: 10px 0px;
+  }
+  
+nav ul {
+    display: flex;
+    flex-direction: horizontal;
+    justify-content: flex-end;
+  }
+nav ul li {
+    margin-right: 10px;
+  }
+
+  nav ul li a {
+    color: #000;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: #fff;
+  }
