@@ -1,9 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
+import {styles} from './styles'
+import ItemList from '../ItemList';
 
-const ItemListNoMeLaContainer = () => {
+const ItemListNoMeLaContainer = ({titulo}) => {
     return (
         <div>
-            <h2>Listado</h2>
+            <h2 style={styles.title}>{titulo}</h2>
+            <ItemList></ItemList>
         </div>
     )
 }

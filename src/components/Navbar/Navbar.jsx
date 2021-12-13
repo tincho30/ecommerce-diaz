@@ -1,17 +1,14 @@
 import React from 'react'
-import './Navbar.css'
 import Cartwdidget from '../CartWidget/Index';
+import {styles} from './styles'
+import Link from '../Link';
 
-const Navbar = ({titulo}) => {
+const Navbar = () => {
     return (
         <div>
-            <nav className="navbar N/A transparent z-depth-0">
+            <nav className="transparent z-depth-0" style={styles.nav}>
                 <ul>
-                    <li>{titulo}</li>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Productos</a></li>
-                    <li><a href="/">Social</a></li>
-                    <li><a href="/">Contact</a></li>
+                    <Link></Link>
                     <Cartwdidget></Cartwdidget>
                 </ul>
                 

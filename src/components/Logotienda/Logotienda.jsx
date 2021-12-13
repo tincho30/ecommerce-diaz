@@ -1,10 +1,9 @@
-import React from 'react'
-import './Logotienda.css'
+import React from 'react';
 
 const Logotienda = () => {
     return (
         <div>
-            <h1>Ecommerce Tincho</h1>
+            <h1>Mi sitio</h1>
         </div>
     )
 }

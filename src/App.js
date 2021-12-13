@@ -1,16 +1,15 @@
-import './App.css';
 import React from 'react'
 import Header from './components/Header/Header';
-import ItemListNoMeLaContainer from './components/ItemListNoMeLaContainter/ItemListNoMeLaContainer';
+import Body from './components/Body';
+import Footer from './components/Footer';
 
-function App() {
-  
-  return (
-    <div className="App">
-      <Header></Header>
-      <ItemListNoMeLaContainer></ItemListNoMeLaContainer>
-    </div>
+const App = () => (
+  <>
+    <Header></Header>
+    <Body></Body>
+    <Footer></Footer>
+  </>
+    
   );
-}
 
 export default App;
