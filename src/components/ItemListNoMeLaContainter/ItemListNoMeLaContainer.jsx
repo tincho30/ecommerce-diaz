@@ -15,7 +15,7 @@ const ItemListNoMeLaContainer = ({titulo}) => {
         const promesaProducts = new Promise((res,rej)=>{
             setTimeout(function(){
                 res(Products)
-            },12000)
+            },2000)
            
         });
         promesaProducts.then(res => setProducts(res))
