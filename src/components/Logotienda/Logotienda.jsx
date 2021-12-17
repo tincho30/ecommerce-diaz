@@ -1,9 +1,10 @@
 import React from 'react';
+import {styles} from './styles'
 
 const Logotienda = () => {
     return (
         <div>
-            <h1>Mi sitio</h1>
+            <img style={styles.picture} src="./logo.png" alt=""/>
         </div>
     )
 }

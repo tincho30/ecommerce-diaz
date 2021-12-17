@@ -1,7 +1,5 @@
 export const styles = {
     main_container: {
-        height:"80vh",
-        background:"#eee",
-        padding: "1em"
+        padding: "2.5em"
     }
 }

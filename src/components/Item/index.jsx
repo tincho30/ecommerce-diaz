@@ -1,13 +1,15 @@
-import React,{useEffect,useState} from 'react'
+import React from 'react'
+import {styles} from './styles'
 
-const Item = ({id,title,year,pictureUrl,price}) => {
+
+const Item = (product) => {
    return(
        <>
-            <ul>
-                <li>{title}</li>
-                <li>{year}</li>
-                <li><img src={pictureUrl} alt={title}/></li>
-                <li>{price}</li>
+            <ul style={styles.listProducts}>
+                <li style={styles.picture}>{product.title}</li>
+                <li>{product.year}</li>
+                <li><img style={styles.picture} src={product.pictureUrl} alt={product.title}/></li>
+                <li>{product.price}</li>
             </ul>
        </>
    )

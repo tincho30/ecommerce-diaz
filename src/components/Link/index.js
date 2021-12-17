@@ -33,7 +33,7 @@ const Link = ({url,name}) => {
             return(
                 
               //  <li key={seccion.catId}><a onMouseOver={()=>setHover(true)} onMouseLeave={()=>setHover(false)} style={{...styles.link,...(hover ? styles.hover : null)}} href={seccion.url}>{seccion.name}</a></li>
-              <li key={seccion.catId}><a href={seccion.url}>{seccion.name}</a></li>
+              <li key={seccion.catId}><a style={styles.link} href={seccion.url}>{seccion.name}</a></li>
             )
         })}
          </>
