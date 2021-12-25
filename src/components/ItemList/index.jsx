@@ -6,13 +6,19 @@ import {styles} from './styles'
 const ItemList = ({products}) => {
     
         return(
-            <div>
-                {products.map((product)=>{
+            <>
+            <div className="container d-flex justify-content-center" style={styles.productList}>
+                    <div className="row"> {products.map((product)=>{
                     return(
-                        <Item key={product.id} title={product.title} year={product.year} pictureUrl={product.pictureUrl} price={product.price}></Item>
-                    );
-                })}
+                        <div className="col-md-4">
+                            <Item key={product.id} title={product.title} year={product.year} pictureUrl={product.pictureUrl} price={product.price}></Item>
+                        </div>
+                        );
+                    })}
+
+                    </div>
             </div>
+            </>
         )
             
     

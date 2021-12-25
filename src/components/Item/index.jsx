@@ -5,13 +5,15 @@ import {styles} from './styles'
 const Item = (product) => {
    return(
        <>
-            <ul style={styles.listProducts}>
-                <li style={styles.picture}>{product.title}</li>
-                <li>{product.year}</li>
+            <ul style={styles.product}>
+                <li style={styles.productTitle}>{product.title}</li>
+                <li style={styles.picture}></li>
+                <li>{"Año: "+product.year}</li>
                 <li><img style={styles.picture} src={product.pictureUrl} alt={product.title}/></li>
-                <li>{product.price}</li>
-            </ul>
-       </>
+                <li style={styles.price}>{"$"+product.price}</li>
+            </ul> 
+            
+       </> 
    )
 }
 
