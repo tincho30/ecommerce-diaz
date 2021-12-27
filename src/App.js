@@ -1,17 +1,23 @@
 import React from 'react'
-import Header from './components/Header/Header';
-import Body from './components/Body';
-import Footer from './components/Footer';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import ItemListNoMeLaContainer from './components/ItemListNoMeLaContainter/ItemListNoMeLaContainer';
 import Navbar from './components/Navbar/Navbar';
 
 const App = () => (
-  <>
-    <Header></Header>
-    <Body></Body>
-    <Footer></Footer>
-  </>
+    <BrowserRouter>
+      <Navbar></Navbar>
+        <Switch>
+          <Route exact path="/">
+            <ItemListNoMeLaContainer titulo="Listado general lince"/>
+          </Route>
+          <Route exact path="/section/:secId">
+            <ItemListNoMeLaContainer titulo="FILTRADO"/>
+          </Route>
+          <Route exact path="*">
+            <Redirect to="/" />
+          </Route>
+        </Switch>
+    </BrowserRouter> 
   );
 
 export default App;

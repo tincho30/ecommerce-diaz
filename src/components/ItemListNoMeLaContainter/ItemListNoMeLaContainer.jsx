@@ -12,17 +12,19 @@ const ItemListNoMeLaContainer = ({titulo}) => {
 
     useEffect(() => {
         //UTILIZAR FETCH
-        const promesaProducts = new Promise((res,rej)=>{
+        const promesaProducts = new Promise((res)=>{
             setTimeout(function(){
                 const myData = secId
-                ? data.filter((product)=>product.category ===
+                ? data.filter((item)=>item.category ===
                 secId)
                 :data;
                 res(myData)
             },500)
            
         });
-        promesaProducts.then(res => setProducts(res))
+        promesaProducts.then((res) => {
+            setProducts(res);
+        })
     },[]);
     return (
         <>

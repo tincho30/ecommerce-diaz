@@ -10,13 +10,13 @@ const Body = () => {
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/">
-                    <ItemListNoMeLaContainer titulo="Listado general lince"/>
+                        <ItemListNoMeLaContainer titulo="Listado general lince"/>
                     </Route>
                     <Route exact path="/section/:secId">
-                    <ItemListNoMeLaContainer titulo="FILTRADO"/>
+                        <ItemListNoMeLaContainer titulo="FILTRADO"/>
                     </Route>
                     <Route exact path="*">
-                    <Redirect to="/" />
+                        <Redirect to="/" />
                     </Route>
                 </Switch>
             </BrowserRouter> 
