@@ -4,7 +4,7 @@ import {styles} from './styles'
 const Logotienda = () => {
     return (
         <div>
-            <img style={styles.picture} src="./logo.png" alt=""/>
+            <img style={styles.picture} src="/logo.png" alt=""/>
         </div>
     )
 }

@@ -3,11 +3,11 @@ import {styles} from './styles'
 import { reject } from 'q';
 
 const Secciones = [
-    {catId:1, name: "Home", url:"/"},
-    {catId:2, name: "Series", url:"/series"},
-    {catId:3, name: "Peliculas", url:"/peliculas"},
-    {catId:4, name: "Comics", url:"/comics"},
-    {catId:5, name: "Contacto", url:"/contacto"}
+    {id:1, name: "Home", url:"/"},
+    {id:2, name: "Series", url:"/section/series"},
+    {id:3, name: "Movies", url:"/section/movies"},
+    {id:4, name: "Comics", url:"/section/comics"},
+    {id:5, name: "Contact", url:"/section/contact"}
 ]
 
 
@@ -27,16 +27,13 @@ const Link = ({url,name}) => {
     const [hover,setHover] = useState(false) 
     
     return (
-        
         <>
-        {secciones.map((seccion)=>{
-            return(
-                
-              //  <li key={seccion.catId}><a onMouseOver={()=>setHover(true)} onMouseLeave={()=>setHover(false)} style={{...styles.link,...(hover ? styles.hover : null)}} href={seccion.url}>{seccion.name}</a></li>
-              <li key={seccion.catId}><a style={styles.link} href={seccion.url}>{seccion.name}</a></li>
-            )
-        })}
-         </>
+            {secciones.map((seccion)=>{
+                return(
+                <li key={seccion.id}><a style={styles.link} href={seccion.url}>{seccion.name}</a></li>
+                )
+            })}
+            </>
           );
 }
 export default Link
