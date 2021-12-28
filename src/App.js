@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import ItemListNoMeLaContainer from './components/ItemListNoMeLaContainter/ItemListNoMeLaContainer';
 import Navbar from './components/Navbar/Navbar';
+import ItemDetailContainer from './components/ItemDetailContainer/Index'
 
 const App = () => (
     <BrowserRouter>
@@ -13,9 +14,12 @@ const App = () => (
           <Route exact path="/section/:secId">
             <ItemListNoMeLaContainer titulo="FILTRADO"/>
           </Route>
-          <Route exact path="*">
-            <Redirect to="/" />
+          <Route exact path="/product/:productId">
+            <ItemDetailContainer />
           </Route>
+         { /*<Route exact path="*">
+            <Redirect to="/" />
+          </Route> */}
         </Switch>
     </BrowserRouter> 
   );

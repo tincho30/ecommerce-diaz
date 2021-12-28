@@ -7,10 +7,12 @@ import {useParams} from 'react-router-dom'
 const ItemListNoMeLaContainer = ({titulo}) => {
 
     const [products,setProducts] = useState([]); 
+    const [loading,setLoading] = useState(true);
     const { secId } = useParams();
     console.log(secId);
 
     useEffect(() => {
+        setLoading(true)
         //UTILIZAR FETCH
         const promesaProducts = new Promise((res)=>{
             setTimeout(function(){
@@ -23,10 +25,13 @@ const ItemListNoMeLaContainer = ({titulo}) => {
            
         });
         promesaProducts.then((res) => {
+
             setProducts(res);
+            setLoading(false);
         })
-    },[]);
+    },[secId]);
     return (
+        loading ? <h3>CARGANDO...</h3> :
         <>
             <h3 style={styles.title}>{titulo}</h3>
             <ItemList style={styles.itemList} products={products}></ItemList>

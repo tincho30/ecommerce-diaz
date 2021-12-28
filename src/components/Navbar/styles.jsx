@@ -13,5 +13,9 @@ export const styles = {
         fontSize: "12px",
         transition: "all .5s",
         marginRight: "10px"
+    },
+    activeClass:{
+        color: "white",
+        fontSize: "30px"
     }
 }

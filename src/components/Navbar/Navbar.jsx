@@ -2,13 +2,14 @@ import React from 'react'
 import Cartwdidget from '../CartWidget/Index';
 import {styles} from './styles'
 import {useState,useEffect} from 'react'
+import {NavLink} from 'react-router-dom'
 
 const Secciones = [
     {id:1, name: "Home", url:"/"},
-    {id:2, name: "Series", url:"/section/series"},
-    {id:3, name: "Movies", url:"/section/movies"},
-    {id:4, name: "Comics", url:"/section/comics"},
-    {id:5, name: "Contact", url:"/section/contact"}
+    {id:2, name: "Series", url:"/section/Series"},
+    {id:3, name: "Movies", url:"/section/Movies"},
+    {id:4, name: "Comics", url:"/section/Comics"}
+    //{id:5, name: "Contact", url:"/section/Contact"}
 ]
 
 const Navbar = ({url,name}) => { 
@@ -25,16 +26,19 @@ const Navbar = ({url,name}) => {
     console.log(secciones)
     
     return (
+        
         <>
-        <ul style={styles.nav}>
+        <div style={styles.nav}>
             {secciones.map((seccion)=>{
                 return(
-                   <li key={seccion.id}><a style={styles.link} href={seccion.url}>{seccion.name}</a></li> 
+                   <div key={seccion.id}><NavLink style={styles.link} to={seccion.url}>{seccion.name}</NavLink></div> 
                 )
             })}
             <Cartwdidget></Cartwdidget>
-            </ul>
+            </div>
             </>
+            
+          
           );
 }
 export default Navbar
