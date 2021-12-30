@@ -3,6 +3,7 @@ import Cartwdidget from '../CartWidget/Index';
 import {styles} from './styles'
 import {useState,useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
+import Logotienda from '../Logotienda/Logotienda'
 
 const Secciones = [
     {id:1, name: "Home", url:"/"},
@@ -26,17 +27,19 @@ const Navbar = ({url,name}) => {
     console.log(secciones)
     
     return (
-        
         <>
-        <div style={styles.nav}>
-            {secciones.map((seccion)=>{
+        <div style={styles.navbar}>
+        <Logotienda />
+            <div style={styles.nav}>
+                {secciones.map((seccion)=>{
                 return(
                    <div key={seccion.id}><NavLink style={styles.link} to={seccion.url}>{seccion.name}</NavLink></div> 
-                )
-            })}
+                        )
+                    })}
             <Cartwdidget></Cartwdidget>
-            </div>
-            </>
+            </div>       
+        </div>
+        </> 
             
           
           );

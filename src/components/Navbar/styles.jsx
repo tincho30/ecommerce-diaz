@@ -1,10 +1,15 @@
 export const styles = {
+    navbar: {
+        background: "#ff9900",
+        display: "flex",
+        justifyContent: "space-between",
+        padding: "5px 20px",
+        alignItems: "center"
+    },
     nav: {
         padding: "10px 0px",
         display: "flex",
-        flexDirection: "horizontal",
-        background: "#f90",
-        justifyContent: "flex-end"
+        flexDirection: "horizontal"
     },
     link: {
         textDecoration: "none",
